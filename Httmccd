@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>workshop</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h1>ITC workshops</h1>
+<img src="C:\Users\hmood\OneDrive\الصور\سطح المكتب\worksp.jpg" alt="logo">
+
+<nav>
+  <a href="/html/">FAQs</a>
+  <a href="/css/">Content</a>
+  <a href="/js/">form</a>  
+</nav>
+
+<h3>Software Development Workshop (SDW01)</h3>
+<img src="C:\Users\hmood\OneDrive\الصور\سطح المكتب\secwork.jpg" alt="workshop img">
+
+<h4>workshop overview</h4>
+<p>This workshop supports new trainers by providing a secure way to communicate with other
+trainers and their enrolled workshop team. Trainers can access workshop information, view
+workshop details, and submit a registration request through the workshop website.</p>
+
+<h2>key topics</h2>
+<ol>
+  <li>html basics</li>
+  <li>course css</li>
+  <li>simple program</li>
+</ol>  
+
+
+<h2>workshop information page</h2>
+  <tr>
+    <th>worksop ID</th>
+    <th>workshop name</th>
+    <th>workshop code</th>
+    <th>level</th>
+    <th>delivery mode</th>
+    <th>location</th>
+    <th>duration weeks</th>
+    <th>start date</th>
+    <th>end  date</th>
+    <th>schedule</th>
+    <th>seats avaliable</th>
+    <th>description</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>software</td>
+    <td>SDW01</td>
+    <td>beginner</td>
+    <td>blended</td>
+    <td>khobar</td>
+    <td>6</td>
+    <td>2-1-2026</td>
+    <td>12-1-2026</td>
+    <td>sun & tue</td>
+    <td>20</td>
+    <td>learn the fundation</td>
+  </tr>
+
+</table>
+
+
+
+<h2>Trainer registration</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="" required><br>
+  <label for="lname">Email:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+ <label for="lname">trainer ID:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Cancel">
+</form>
+<footer>
+<img src="C:\Users\hmood\OneDrive\الصور\سطح المكتب\linkdin.png">
+</footer>
+
+</body>
+</html>
