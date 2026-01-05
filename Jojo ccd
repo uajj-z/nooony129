@@ -1,0 +1,18 @@
+// This timer is used to toggle the visibility of the message label every 500 milliseconds
+Timer flashTimer = new Timer(500, new ActionListener() {
+    boolean visible = true;
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        messageLabel.setVisible(visible);
+        visible = !visible;
+    }
+});
+
+// This line gets the current date to check the current month
+LocalDate today = LocalDate.now();
+
+// This condition checks if the current month is not March and stops execution if true
+if (today.getMonthValue() != 3) {
+    System.out.print("//is not open");
+    return;
+}
