@@ -1,0 +1,83 @@
+XSL
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<body>
+<h1>College Records</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Major</th>
+        <th>Action</th>
+    </tr>
+    <xsl:for-each select="trainee/trainees">
+        <tr>
+            <td><xsl:value-of select="Name"/></td>
+            <td><xsl:value-of select="Email"/></td>
+            <td><xsl:value-of select="Major"/></td>
+            <td>
+                <form method="post" action="delete.php">
+                    <input type="hidden" name="index" value="{position()-1}"/>
+                    <input type="submit" value="Delete"/>
+                </form>
+            </td>
+        </tr>
+    </xsl:for-each>
+</table>
+<h3>Add Record</h3>
+<form method="post" action="insert.php">
+    <input type="text" name="Name" placeholder="Name" required="required"/><br/><br/>
+    <input type="text" name="Email" placeholder="Email" required="required"/><br/><br/>
+    <input type="text" name="Major" placeholder="Major" required="required"/><br/><br/>
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
+
+
+delete php 
+<?php
+$index = $_POST['index'];
+$xml = new DOMDocument();
+$xml->load("trainees.xml");
+$trainees = $xml->getElementsByTagName("trainee");
+  $trainee = $trainees->item($index);
+    $trainee->parentNode->removeChild($trainee);
+$xml-> Save('trainees.xml');
+?> 
+
+
+insert php 
+<?php
+$Name  = $_POST['Name'];
+$Email = $_POST['Email'];
+$Major = $_POST['Major'];
+
+$xml = new DOMDocument();
+
+// Check if XML loads correctly
+if (!$xml->load('trainees.xml')) {
+    die('Error loading XML file');
+}
+
+$root = $xml->getElementsByTagName('trainees')->item(0);
+
+if ($root === null) {
+    die('Root <trainees> not found');
+}
+
+// Create trainee
+$trainee = $xml->createElement('trainee');
+$trainee->appendChild($xml->createElement('Name', $Name));
+$trainee->appendChild($xml->createElement('Email', $Email));
+$trainee->appendChild($xml->createElement('Major', $Major));
+
+// Append and save
+$root->appendChild($trainee);
+$xml->save('trainess.xml');
+?>
