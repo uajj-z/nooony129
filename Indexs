@@ -1,0 +1,60 @@
+(index.html)
+<html>
+   <body>
+      <h2>Trainees List</h2>
+      <table border="1">
+         <tr bgcolor="#9acd32">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Major</th>
+            <th>Action</th>
+         </tr>
+         <tr>
+            <td>Reem</td>
+            <td>Reem22@gmail.com</td>
+            <td>SD</td>
+            <td>
+               <form method="post" action="delete.php">
+                  <input type="hidden" name="index" value="0"/>
+                  <input type="submit" value="Delete"/>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td>Noura</td>
+            <td>Noura33@gmail.com</td>
+            <td>DBMS</td>
+            <td>
+               <form method="post" action="delete.php">
+                  <input type="hidden" name="index" value="1"/>
+                  <input type="submit" value="Delete"/>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td>shahad</td>
+            <td>shahad22@gmail.com</td>
+            <td>IT</td>
+            <td>
+               <form method="post" action="delete.php">
+                  <input type="hidden" name="index" value="2"/>
+                  <input type="submit" value="Delete"/>
+               </form>
+            </td>
+         </tr>
+      </table>
+      <h2>Add New Trainee</h2>
+      <form method="post" action="add.php">
+         <label>Name:</label>
+         <input type="text" name="name"/>
+         <br/>
+         <label>Email:</label>
+         <input type="text" name="email"/>
+         <br/>
+         <label>Major:</label>
+         <input type="text" name="major"/>
+         <br/>
+         <input type="submit" value="Add"/>
+      </form>
+   </body>
+</html>
