@@ -1,0 +1,19 @@
+trainers.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<trainers>
+  <trainer>
+    <Name>Reem</Name>
+    <Email>Reem22@gmail.com</Email>
+    <Major>SD</Major>
+  </trainer>
+  <trainer>
+    <Name>Noura</Name>
+    <Email>Noura33@gmail.com</Email>
+    <Major>DBMS</Major>
+  </trainer>
+  <trainer>
+    <Name>shahad</Name>
+    <Email>shahad22@gmail.com</Email>
+    <Major>IT</Major>
+  </trainer>
+</trainers>
